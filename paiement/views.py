@@ -51,6 +51,4 @@ def index(request):
 
 # Url_callback
 def url_call_back_pvit(request):
-	url_call = urllib.request.urlopen(url).read(1000)
-	if url_call:
-		print(url_call)
+	print(urllib.request.urlopen(url).read(1000))
