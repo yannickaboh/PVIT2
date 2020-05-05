@@ -56,7 +56,7 @@ def url_call_back_pvit(request):
 # Statut_paiement
 def statut_paiement(request, statut, reference):
 	if statut == 200:
-		paie = Transaction.objects.get(refer=reference)
+		paie = Transaction.objects.get(reference=reference)
 		if paie:
 			paie.is_payed = True
 			paie.save()
@@ -65,5 +65,6 @@ def statut_paiement(request, statut, reference):
 		else:
 			message = 'Payement echoué !!!'
 			return render(request, 'paiement/echec.html', {'message':message})
+	message = 'Erreur !!!'
 	return render(request, 'paiement/error.html', {'message':message})
 
