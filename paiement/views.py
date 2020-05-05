@@ -52,3 +52,18 @@ def index(request):
 # Url_callback
 def url_call_back_pvit(request):
 	print(urllib.request.urlopen('http://pvit2.pythonanywhere.com/url_call_back_pvit/').read(1000))
+
+# Statut_paiement
+def statut_paiement(request, statut, reference):
+	if statut == 200:
+		paie = Transaction.objects.get(refer=reference)
+		if paie:
+			paie.is_payed = True
+			paie.save()
+			message = 'Payement effectué avec succès !!!'
+			return render(request, 'paiement/succes.html', {'message':message})
+		else:
+			message = 'Payement echoué !!!'
+			return render(request, 'paiement/echec.html', {'message':message})
+	return render(request, 'paiement/error.html', {'message':message})
+

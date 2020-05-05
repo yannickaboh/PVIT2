@@ -76,10 +76,22 @@ WSGI_APPLICATION = 'pvit.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+#DATABASES = {
+    #'default': {
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
+#}
+
+# MYSQL
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'apipvit_2020',
+        'USER': 'apipvit',
+        'PASSWORD': 'AZwx1234',
+        'HOST': 'mysql-apipvit.alwaysdata.net',
+        'PORT': '3306',
     }
 }
 
