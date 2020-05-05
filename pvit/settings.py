@@ -25,7 +25,7 @@ SECRET_KEY = '8-s7)cj6x=@y@b6vz^u616r)=w=c!)^%a^1^hr+*an3$4x#@-a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'pvit2.pythonanywhere.com', 'https://pvit2.pythonanywhere.com/url_call_back_pvit/']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'pvit2.pythonanywhere.com', 'http://pvit2.pythonanywhere.com/url_call_back_pvit/']
 
 
 # Application definition

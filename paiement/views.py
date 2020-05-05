@@ -51,4 +51,4 @@ def index(request):
 
 # Url_callback
 def url_call_back_pvit(request):
-	print(urllib.request.urlopen(url).read(1000))
+	print(urllib.request.urlopen('http://pvit2.pythonanywhere.com/url_call_back_pvit/').read(1000))
