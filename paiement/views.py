@@ -34,6 +34,7 @@ import urllib.request
 from django.views.generic import View
 
 from .models import *
+from .utils import random_string_generator
 
 # Create your views here.
 
@@ -47,7 +48,8 @@ from .models import *
 
 # Acceuil
 def index(request):
-	return render(request, 'paiement/index.html', {})
+	reference = random_string_generator()
+	return render(request, 'paiement/index.html', {'reference':reference})
 
 # Url_callback
 def url_call_back_pvit(request):
