@@ -30,7 +30,7 @@ urlpatterns = [
     # Veravillage site urls
     path('', views.index, name='index'), 
     path('url_call_back_pvit/', views.url_call_back_pvit, name='url_call_back_pvit'), 
-    path('statut_paiement/<int:statut>/<str:reference>/', views.statut_paiement, name='statut_paiement'), 
+    path('statut_paiement/<statut>/<reference>/', views.statut_paiement, name='statut_paiement'), 
 
 
 ]
