@@ -91,7 +91,6 @@ DATABASES = {
         'USER': 'apipvit',
         'PASSWORD': 'AZwx1234',
         'HOST': 'mysql-apipvit.alwaysdata.net',
-        'PORT': '3306',
     }
 }
 
