@@ -59,6 +59,7 @@ def url_call_back_pvit(request):
 def statut_paiement(request):
 	statut = request.GET['statut']
 	reference = request.GET['reference']
+	print(statut, reference)
 	if statut == 200:
 		paie = Transaction.objects.get(reference=reference)
 		if paie:
