@@ -56,6 +56,8 @@ def url_call_back_pvit(request):
 	print(urllib.request.urlopen('http://pvit2.pythonanywhere.com/url_call_back_pvit/').read(1000))
 
 # Statut_paiement
+statut = None
+reference = None
 def statut_paiement(request):
 	statut = request.GET['statut']
 	reference = request.GET['reference']
