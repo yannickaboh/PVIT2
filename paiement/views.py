@@ -60,16 +60,16 @@ def statut_paiement(request):
 	statut = request.GET['statut']
 	reference = request.GET['reference']
 	print(statut, reference)
-	if statut == 200:
+	if statut == '200' or statut == 200:
 		paie = Transaction.objects.get(reference=reference)
 		if paie:
 			paie.is_payed = True
 			paie.save()
 			message = 'Payement effectué avec succès !!!'
-			return render(request, 'paiement/succes.html', {'message':message})
+			return render(request, 'paiement/succes.html', {'message':message, 'statut':statut, 'reference':reference})
 		else:
 			message = 'Payement echoué !!!'
-			return render(request, 'paiement/echec.html', {'message':message})
+			return render(request, 'paiement/echec.html', {'message':message, 'statut':statut, 'reference':reference})
 	message = 'Erreur !!!'
-	return render(request, 'paiement/error.html', {'message':message})
+	return render(request, 'paiement/error.html', {'message':message, 'statut':statut, 'reference':reference})
 
